@@ -1,0 +1,17 @@
+{% extends "common/base.html" %}
+{% block title %}register{% endblock %}
+{% block page_name %}register{% endblock %}
+{% block content %}
+{% if message %}
+<div id="message">
+	<p>{{message}}</p>
+</div>
+{% endif %}	
+{% include "form/formError.html" %}
+<div class="form">
+<form action="/register/" method="POST">{% csrf_token %}
+	{% include "form/form.html" %}
+	<input type="submit" value="submit">
+</form>
+</div>
+{% endblock content %}

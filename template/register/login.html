@@ -1,0 +1,16 @@
+{% extends "common/base.html" %}
+{% block title %}login{% endblock %}
+{% block page_name %}login{% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+<p>Logged in already.</p>
+{% else %}
+{% include "form/formError.html" %}
+<div class="form">
+<form action="/login/" method="POST">{% csrf_token %}
+	{% include "form/form.html" %}
+	<input type="submit" value="submit">
+</form>
+</div>
+{% endif %}
+{% endblock content %}

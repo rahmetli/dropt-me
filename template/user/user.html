@@ -1,0 +1,20 @@
+{% extends "common/base.html" %}
+{% block title %}{{ request.subdomain }}{% endblock %}
+{% block page_name %}user{% endblock %}
+{% block loginarea %}
+    {% if user.is_authenticated %}
+    <p><a href="{{SITE_URL}}/logout/" title="Logout">Logout</a></p>
+    {% else %}
+    <p><a href="{{SITE_URL}}/login/" title="Login">Login</a></p>
+    {% endif %}
+{% endblock %}
+{% block content %}
+<p>this is a default user page.</p>
+<div id="subdomain">{{request.subdomain}}</div>
+{% if directory %}{% csrf_token %}
+<br/>
+<div id="directory">
+
+</div>
+{% endif %}
+{% endblock content %}

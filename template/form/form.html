@@ -1,0 +1,12 @@
+<table>
+{% for field in form %}
+	<tr>
+		{% if field.name == 'redirect' %}
+			{{ field.as_hidden }}
+		{% else %}
+			<td>{{ field.label_tag }}:</td><td>{{ field }}</td>
+		{% endif %}
+		
+	</tr>
+{% endfor %}
+</table>
