@@ -1,0 +1,10 @@
+<div id="current_path"><span>{{path}}</span></div>
+	<ul>
+		<li class="up"><a href="#">..</a></li>
+	{% for dict in directory %}					
+		<li class="{% if dict.is_dir %}folder{%else%}file{%endif%}">
+			<span class="type"></span>
+			{% if dict.is_dir %}<a href="#">{{dict.path}}</a>{% else %}{{dict.path}}{% endif %}
+		</li>
+	{% endfor %}
+	</ul>

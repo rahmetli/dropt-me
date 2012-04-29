@@ -1,0 +1,95 @@
+body {
+    margin:0 auto;
+    font-family: "Trebuchet MS", Arial, Tahoma, sans-serif;
+}
+
+#home .loading, #login .loading, #register .loading, #authorize .loading
+{
+    display: none;
+}
+
+#container {
+    margin:0 auto;
+    width: 900px;
+}
+
+#header {
+    background: blue;
+    color: white;
+    height: 60px;
+    padding: 10px;
+}
+
+#header .left {
+    float: left;
+    width: 440px;
+}
+
+#header .right {
+    float: left;
+    text-align: right;
+    width: 440px;
+    padding-top: 30px;
+}
+
+
+#header .left h1 {
+    font-size: 50px;
+}
+
+#header .left a {
+    color: white;
+    text-decoration: none;
+}
+
+#header .right a:hover {
+    color: white;
+}
+
+#footer {
+
+}
+
+#authorize .content {
+    text-align:center;
+}
+
+#authorize .content span {
+   font-size: 40px;
+}
+
+#authorize .content p {
+   margin: 10px;
+}
+
+.content{
+    padding:10px;
+    height: 500px;
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+#message {
+    color: white;
+    background: green;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#error {
+    color: white;
+    background: red;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.form table tr td {
+    padding: 5px;
+}

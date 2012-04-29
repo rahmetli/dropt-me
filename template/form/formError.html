@@ -1,0 +1,12 @@
+{% if form.errors %}
+<div id="error">
+	<p>Some error occured:</p>
+	<ul>
+	{% for field in form %}
+	{% for error in field.errors %}
+	<li>- {{error|escape}}</li>
+	{% endfor %}
+	{% endfor %}
+	</ul>
+</div>
+{% endif %}

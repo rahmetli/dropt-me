@@ -1,0 +1,16 @@
+<div id="header">
+	<div class="left">
+        <h1><a href="{{SITE_URL}}">dropt.me</a></h1>
+	</div>
+    <div class="right">
+        <div class="loginarea">
+            {% block loginarea %}
+            {% if user.is_authenticated %}
+            <p>Welcome, <strong>{{user.username}}</strong>. <a href="{{SITE_URL}}/logout/" title="Logout">Logout</a></p>
+            {% else %}
+            <p><a href="{{SITE_URL}}/login/" title="Login">login</a> | <a href="{{SITE_URL}}/register/" title="Login">register</a></p>
+            {% endif %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
